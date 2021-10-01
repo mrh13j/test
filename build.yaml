@@ -1,0 +1,26 @@
+---
+
+- name: Build image in Jenkins server and push to registry
+  hosts: jenkins_server
+  become: yes
+  become_user: pl
+  become_method: sudo
+  gather_facts: false
+
+  tasks:
+    - name: Delete existing images from Jenkins server
+      shell: docker rmi $(docker images -q) -f
+      ignore_errors: yes
+
+    - name: Push mw-image from Jenkins server to registry
+      docker_image:
+        name: mw-image
+        build:
+          path: /opt/app
+          pull: true
+        state: present
+        tag: "latest"
+        force_tag: yes
+        repository: mrh13j/repo:latest
+        push: yes
+        source: build
