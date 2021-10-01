@@ -16,3 +16,23 @@
         pull: yes
         ports:
           - "80:8080"
+    - name: Pull mw-image from registry and run a container
+      docker_container:
+        name: mw-container
+        image: mrh13j/repo:latest
+        state: started
+        recreate: yes
+        detach: true
+        pull: yes
+        ports:
+          - "81:8081"
+     - name: Pull mw-image from registry and run a container
+      docker_container:
+        name: mw-container
+        image: mrh13j/repo:latest
+        state: started
+        recreate: yes
+        detach: true
+        pull: yes
+        ports:
+          - "82:8082"
