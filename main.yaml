@@ -8,7 +8,7 @@
   tasks:
     - name: Pull mw-image from registry and run a container
       docker_container:
-        name: mw-container
+        name: mw-container1
         image: mrh13j/repo:latest
         state: started
         recreate: yes
@@ -18,7 +18,7 @@
           - "80:8080"
     - name: Pull mw-image from registry and run a container
       docker_container:
-        name: mw-container
+        name: mw-container2
         image: mrh13j/repo:latest
         state: started
         recreate: yes
@@ -28,7 +28,7 @@
           - "81:8081"
      - name: Pull mw-image from registry and run a container
       docker_container:
-        name: mw-container
+        name: mw-container3
         image: mrh13j/repo:latest
         state: started
         recreate: yes
