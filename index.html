@@ -3,9 +3,8 @@ I am a sample app.<br><br>
 Here is how I was created;<br>
 
 <ol>
-<li>Jenkins pulled all of my files from Github and saved it in the Jenkins server.</li>
-<li>Jenkins used my war to create a Docker image with the help of Ansible.</li>
-<li>Jenkins send my image to Docker Registry using Ansible.</li>
-<li>Jenkins called Ansible again to create a container for me in the Docker server.</li>
-<li>Find me at http://docker_server/sample/.</li>
+<li>Jenkins pulled all the files from Github and saved it in the Jenkins server (/opt/app/).</li>
+<li>Jenkins used the files to create a Docker image using Ansible.</li>
+<li>Jenkins send the image to Docker Registry using Ansible.</li>
+<li>Jenkins used Ansible to create a container in the Docker server.</li>
 </ol>
