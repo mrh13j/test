@@ -1,4 +1,4 @@
-FROM tomcat:jdk11-corretto
+FROM tomcat:10.0.16-jdk11-corretto
 
 LABEL name="mw-image"
 
